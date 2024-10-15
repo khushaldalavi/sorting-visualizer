@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .blue {
+            color: blue;
+            font-size: medium;
+        }
+
+        .yellow {
+            color: yellow;
+            font-size: medium;
+        }
+
+        .red {
+            color: red;
+            font-size: medium;
+        }
+
+        .Green {
+            color: green;
+            font-size: medium;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+
+
+            <div class="header_right">
+                <p class="nav-heading">Sorting visualizer</p>
+
+                <!-- <a class="own_array" href="./index1.html" target="_blank" >Create your Own array here.</a> -->
+            </div>
+            <div class="algos">
+                <button>Bubble</button>
+                <button>Merge</button>
+                <button>Insertion</button>
+                <button>Quick</button>
+                <button>Selection</button>
+                <button style="margin-right: 0px;">Heap</button>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+
+        <div id="Info_Cont1">
+            <div class="array-inputs">
+                <p>Size of the array:</p><br>
+                <input id="a_size" type="range" min=20 max=100 step=1 value=10>
+                <p id="p2">Speed of the algorithm:</p>
+                <input id="a_speed" type="range" min=1 max=5 step=1 value=4>
+                <p id="p3">Generate New Array!</p>
+                <button id="a_generate">Click here!</button>
+                <p id="p4">Create your Own array </p>
+                <button id="own_arr_btn" class="own_array">Click here!</button>
+            </div>
+        </div>
+
+        <div id="array_container">
+
+        </div>
+
+        <div id="Info_Cont2">
+
+            
+
+            <div class="Complexity_Containers" id="Space_Complexity_Types_Container">
+
+                <h3>SPACE COMPLEXITY</h3>   
+                    <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Worst case:</p>
+                    <p id="Space_Worst"></p>
+            </div>
+
+            </div>
+            
+            <div class="Complexity_Containers  " id="Time_Complexity_Types_Container">
+                <h3>TIME COMPLEXITY</h3>
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Worst case:</p>
+                    <p id="Time_Worst"></p>
+                </div>
+
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Average case:</p>
+                    <p id="Time_Average"></p>
+                </div>
+
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Best case:</p>
+                    <p id="Time_Best"></p>
+                </div>
+                <div class="info">
+                    <h3>BAR COLORS</h3>
+                    <p class="blue">blue: default.</p>   
+                    <p class="yellow">yellow: Being compared.</p>                     
+                    <p class="red">Red: Identified as in incorrect position and to be moved.</p>
+                    <p class="Green">Green: In correct position.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <script src="./scripts/bubble_sort.js"></script>
+    <script src="./scripts/selection_sort.js"></script>
+    <script src="./scripts/insertion_sort.js"></script>
+    <script src="./scripts/merge_sort.js"></script>
+    <script src="./scripts/quick_sort.js"></script>
+    <script src="./scripts/heap_sort.js"></script>
+    <script src="./scripts/main.js"></script>
+    <!--This should be at the end of body and should be loaded before sorts.js-->
+    <script src="./scripts/visualizations.js"></script>
+    <!--This should be loaded after main.js-->
+</body>
+
+</html>
